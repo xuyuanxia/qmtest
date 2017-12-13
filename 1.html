@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>time</title>
+   <style type="text/css">
+     h3{
+        font-size: 28px;
+        text-align: center;
+        text-shadow:10px 10px 3px #ACA9B7;
+       }
+   </style>
+   <script>
+       function startTime(){
+	        var today=new Date();
+	        var h=today.getHours();
+	        var m=today.getMinutes();
+	        var s=today.getSeconds();
+	        m=checkTime(m);
+	        s=checkTime(s);
+	        document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+	        t=setTimeout(function(){startTime()},500);
+    }
+        function checkTime(i){
+	         if (i<10){
+		     i="0" + i;
+	}
+	    return i;
+}
+</script>
+</head>
+<body onload="startTime()">
+	
+<div id="txt"></div>
+<h3>Welcome to my wabpage~</h3>
+	
+</body>
+</html>

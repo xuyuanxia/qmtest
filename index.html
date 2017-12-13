@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+       h2{
+        text-align:left;
+        text-shadow:10px 10px 3px #8964D3;
+        font-size: 26px;
+        color:#E996E6;
+       }
+       #img1{
+        border:1;
+        text-align:center;
+        box-shadow: 10px 10px 10px #B1E7E8;
+        display: none;
+       }
+       #img2{
+        border:1;
+        text-align:center;
+        box-shadow: 10px 10px 10px #B1E7E8;
+       }
+       #p1{
+        font-size: 28px;
+        text-align: center;
+        text-shadow:10px 10px 3px #ACA9B7;
+       }
+       #p2{
+        text-align: center;
+        text-shadow:10px 10px 3px #ACA9B7;
+        font-size: 26px;
+       }
+    </style>
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    </script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+         	$("h2").click(function(){
+                $("h2").animate({left:'50px'},"slow");
+                $("h2").animate({fontSize:'3em'},"slow");   
+            });
+            $("img").click(function(){
+         		$("#img1").fadeIn("slow");
+         		$("#img2").fadeOut(3000).fadeIn("slow");
+         	});
+            $("p").click(function(){
+                $("p").css("color","#F54E42").animate({fontSize:'2em'},"slow").slideUp("2000").slideDown("2000");
+            });
+         });
+    </script>
+</head>
+<body>
+    <h2>Hello~</h2>
+	<img src="1.jpg" id="img1">
+	<img src="2.jpg" id="img2">
+    <p id="p1">Do not pray for an easy life, pray for the strength to endure a difficult one.</p>
+    <p id="p2">See you<p>
+</body>
+</html>
